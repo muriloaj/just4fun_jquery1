@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Introdução ao jQuery</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/estilos.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+	function copia() {
+		var input = $('#campo-nome');
+		var output = $('#texto-copiado');
+		var nome = input.val();
+		input.val('');
+		output.text(nome);
+		
+		alert("punk mas foi");
+	}
+</script>
+</head>
+<body class="container">
+
+	<h1>Hello World</h1>
+
+	<label>Digite seu nome:</label>
+
+	<input id="campo-nome" />
+	<input id="botao-copiar" type="button" value="copiar"
+		onclick="javascript:copia()" />
+
+	<h2 id="texto-copiado"></h2>
+
+
+	<hr />
+
+	<input id="nome" type="text" />
+	<input type="button" value="Gravar" />
+
+	<script>
+		$('#nome').on("blur", function() {
+			var texto = $(this).val();
+			if (!texto) {
+				alert("Nao deve ser vazio!");
+			} else {
+				alert(texto);
+			}
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Introdução ao jQuery</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/estilos.css">
+<script src="js/jquery.js"></script>
+
+</head>
+<body class="container">
+
+	<h1>Hello World</h1>
+
+	<label>Digite seu nome:</label>
+	<input id="campo-nome" />
+	<input id="botao-copiar" type="button" value="copiar" />
+
+	<h2 id="texto-copiado">old</h2>
+	<script>
+	
+	//	$('#botao-copiar').click(function() {
+	// $('#botao-copiar').on("click",function(){
+		$('#campo-nome').on("change",function(){ // sem clicar... wohow!!!
+			var nome = $('#campo-nome').val();
+			$('#texto-copiado').text(nome);
+
+		})
+	</script>
+
+</body>
+</html>
